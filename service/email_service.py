@@ -1,9 +1,11 @@
-import smtplib, ssl
+import smtplib
+import ssl
 
 from system.load_data import *
 from system.logger import logger
 
 config = load_data('config/config.yml')
+
 
 def send_notification(message):
 

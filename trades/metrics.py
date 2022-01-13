@@ -37,4 +37,4 @@ def plot_dca_history(data, average):
         plt.title(f'{coin} | Average {round(average[coin], 3)}')
         plt.savefig(f'trades/dca-tracker/{coin}.png')
         plt.clf()
-        #plt.show()
+        # plt.show()

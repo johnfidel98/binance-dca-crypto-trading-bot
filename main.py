@@ -54,11 +54,11 @@ def main():
                         order[coin]["orders"] = []
 
                     order[coin]["orders"].append({
-                                'symbol':coin+pairing,
-                                'price':last_price,
-                                'volume':volume,
-                                'time':datetime.timestamp(datetime.now())
-                                })
+                        'symbol': coin+pairing,
+                        'price': last_price,
+                        'volume': volume,
+                        'time': datetime.timestamp(datetime.now())
+                    })
 
                     logger.info('PLACING TEST ORDER')
 
@@ -74,7 +74,8 @@ def main():
                 logger.info(e)
 
             else:
-                logger.info(f"Order created with {volume} on {coin} at {datetime.now()}")
+                logger.info(
+                    f"Order created with {volume} on {coin} at {datetime.now()}")
                 store_order('trades/order.json', order)
 
         message = f'DCA complete, bought {coins_to_DCA}. Waiting {frequency} days.'
